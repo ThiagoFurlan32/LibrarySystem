@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 namespace LibrarySystem.Models.Dominio
 {
     public enum TipoMovimento {Venda, Empréstimo}
+
+    [Table("Movimentacao")]
     public class Movimentacao
     {
         [Key]

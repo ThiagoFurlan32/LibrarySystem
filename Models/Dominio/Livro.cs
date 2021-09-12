@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace LibrarySystem.Models.Dominio
 {
+    [Table("Livro")]
     public class Livro
     {
 

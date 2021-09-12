@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace LibrarySystem.Models.Dominio
 {
+    [Table("Colaborador")]
     public class Colaborador
     {
         [Key]
