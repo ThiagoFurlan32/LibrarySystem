@@ -23,6 +23,7 @@ namespace LibrarySystem.Models.Dominio
         public string nome { get; set; }
 
         [Display(Name = "Porcentagem Desconto")]
+        [Required(ErrorMessage = "Campo Porcentagem de Desconto é obrigatório")]
         [StringLength(3, ErrorMessage = "Não aceita porcentagem com mais de 3 dígitos")]
         public string porcen_desconto { get; set; }
 
