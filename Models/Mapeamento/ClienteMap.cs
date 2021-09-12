@@ -15,8 +15,11 @@ namespace LibrarySystem.Models.Mapeamento
             builder.Property(p => p.id).ValueGeneratedOnAdd();
             builder.Property(p => p.nome).HasMaxLength(35).IsRequired();
             builder.Property(p => p.cpf).HasMaxLength(14).IsRequired();
+            builder.HasIndex(p => p.cpf).IsUnique();
             builder.Property(p => p.Plano).HasMaxLength(14).IsRequired();
             builder.Property(p => p.movimentacao).HasMaxLength(35).IsRequired();
+
+            builder.HasMany(p => p.movimentacao).WithOne(p => p.cliente).HasForeignKey(p => p.cliente).OnDelete(DeleteBehavior.NoAction);
 
             builder.ToTable("Clientes");
         }

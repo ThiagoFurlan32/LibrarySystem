@@ -15,6 +15,7 @@ namespace LibrarySystem.Models.Mapeamento
             builder.Property(p => p.id).ValueGeneratedOnAdd();
             builder.Property(p => p.nome).HasMaxLength(35).IsRequired();
             builder.Property(p => p.cpf).HasMaxLength(14).IsRequired();
+            builder.HasIndex(p => p.cpf).IsUnique();
             builder.Property(p => p.email).HasMaxLength(40).IsRequired();
             builder.Property(p => p.usuario).HasMaxLength(35).IsRequired();
 

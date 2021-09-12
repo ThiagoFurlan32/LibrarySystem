@@ -14,8 +14,8 @@ namespace LibrarySystem.Models.Mapeamento
             builder.HasKey(p => p.id);
             builder.Property(p => p.id).ValueGeneratedOnAdd();
             builder.Property(p => p.nome).HasMaxLength(35).IsRequired();
-            builder.Property(p => p.nome).HasMaxLength(3).IsRequired();
 
+            builder.HasMany(p => p.cliente).WithOne(p => p.Plano).HasForeignKey(p => p.Plano).OnDelete(DeleteBehavior.NoAction);
 
             builder.ToTable("Planos");
         }

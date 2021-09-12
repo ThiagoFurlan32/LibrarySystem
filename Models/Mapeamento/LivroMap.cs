@@ -16,7 +16,9 @@ namespace LibrarySystem.Models.Mapeamento
             builder.Property(p => p.preco_compra).HasMaxLength(35).IsRequired();
             builder.Property(p => p.preco_venda).HasMaxLength(35).IsRequired();
             builder.Property(p => p.quantidade).HasMaxLength(15).IsRequired();
-            builder.Property(p => p.movimentacao).HasMaxLength(35).IsRequired();
+            //builder.Property(p => p.movimentacao).HasMaxLength(35).IsRequired();
+
+            builder.HasMany(p => p.movimentacao).WithOne(p => p.livro).HasForeignKey(p => p.livro).OnDelete(DeleteBehavior.NoAction);
 
             builder.ToTable("Livros");
         }
