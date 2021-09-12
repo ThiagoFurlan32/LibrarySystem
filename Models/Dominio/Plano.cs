@@ -24,7 +24,7 @@ namespace LibrarySystem.Models.Dominio
 
         [Display(Name = "Porcentagem Desconto")]
         [StringLength(3, ErrorMessage = "Não aceita porcentagem com mais de 3 dígitos")]
-        public float porcen_desconto { get; set; }
+        public string porcen_desconto { get; set; }
 
         public ICollection<Cliente> cliente { get; set; }
     }

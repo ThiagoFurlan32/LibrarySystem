@@ -16,7 +16,7 @@ namespace LibrarySystem.Models.Mapeamento
             builder.Property(p => p.nome).HasMaxLength(35).IsRequired();
             builder.Property(p => p.nome).HasMaxLength(3).IsRequired();
 
-
+            
 
             builder.ToTable("Planos");
         }

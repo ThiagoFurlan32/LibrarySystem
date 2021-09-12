@@ -24,11 +24,11 @@ namespace LibrarySystem.Models.Dominio
 
         [Required(ErrorMessage = "Campo Preço de Compra é obrigatório")]
         [Display(Name = "Preço de Compra")]
-        public float preco_compra { get; set; }
+        public string preco_compra { get; set; }
 
         [Required(ErrorMessage = "Campo Preço de Venda é obrigatório")]
         [Display(Name = "Preço de Venda")]
-        public float preco_venda { get; set; }
+        public string preco_venda { get; set; }
 
         [Required(ErrorMessage = "Campo Quantidade é obrigatório")]
         [Display(Name = "Quantidade")]
