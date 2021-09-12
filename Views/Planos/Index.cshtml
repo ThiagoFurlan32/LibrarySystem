@@ -1,4 +1,4 @@
-﻿@model IEnumerable<LibrarySystem.Models.Dominio.Cliente>
+﻿@model IEnumerable<LibrarySystem.Models.Dominio.Plano>
 
 @{
     ViewData["Title"] = "Index";
@@ -17,7 +17,7 @@
                 @Html.DisplayNameFor(model => model.nome)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.cpf)
+                @Html.DisplayNameFor(model => model.porcen_desconto)
             </th>
             <th></th>
         </tr>
@@ -29,7 +29,7 @@
                 @Html.DisplayFor(modelItem => item.nome)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.cpf)
+                @Html.DisplayFor(modelItem => item.porcen_desconto)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.id">Edit</a> |

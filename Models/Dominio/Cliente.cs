@@ -26,7 +26,7 @@ namespace LibrarySystem.Models.Dominio
         [Display(Name = "CPF")]
         [StringLength(14, ErrorMessage = "Não aceita CPF com mais de 14 dígitos")]
         [Remote("ValidarCPF", "Clientes", ErrorMessage = "CPF Inválido!!!")]
-        public int cpf { get; set; }
+        public string cpf { get; set; }
 
         [Display(Name = "Plano")]
         public Plano Plano { get; set; }
