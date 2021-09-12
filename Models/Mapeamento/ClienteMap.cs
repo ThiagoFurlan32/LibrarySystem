@@ -18,6 +18,7 @@ namespace LibrarySystem.Models.Mapeamento
             builder.Property(p => p.Plano).HasMaxLength(14).IsRequired();
             builder.Property(p => p.movimentacao).HasMaxLength(35).IsRequired();
 
+            builder.ToTable("Clientes");
         }
 
 

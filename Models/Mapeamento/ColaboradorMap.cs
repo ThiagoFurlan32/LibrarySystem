@@ -18,6 +18,7 @@ namespace LibrarySystem.Models.Mapeamento
             builder.Property(p => p.email).HasMaxLength(40).IsRequired();
             builder.Property(p => p.usuario).HasMaxLength(35).IsRequired();
 
+            builder.ToTable("Colaboradores");
         }
     }
 }

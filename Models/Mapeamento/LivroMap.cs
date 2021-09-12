@@ -17,6 +17,8 @@ namespace LibrarySystem.Models.Mapeamento
             builder.Property(p => p.preco_venda).HasMaxLength(35).IsRequired();
             builder.Property(p => p.quantidade).HasMaxLength(15).IsRequired();
             builder.Property(p => p.movimentacao).HasMaxLength(35).IsRequired();
+
+            builder.ToTable("Livros");
         }
     }
 }
