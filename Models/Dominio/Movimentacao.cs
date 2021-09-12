@@ -17,14 +17,18 @@ namespace LibrarySystem.Models.Dominio
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [DisplayName("ID")]
         public int id { get; set; }
-        
-        
+
+        [Display(Name = "Cliente")]
         public Cliente cliente { get; set; }
+
+        [Display(Name = "Livro")]
         public Livro livro { get; set; }
 
         [Required(ErrorMessage = "Campo Quantidade é obrigatório")]
         [Display(Name = "Quantidade")]
         public int quantidade { get; set; }
+
+        [Display(Name = "TipoMovimento")]
         public TipoMovimento movimento { get; set; }
     }
 }

@@ -28,7 +28,7 @@ namespace LibrarySystem.Models.Dominio
         [Remote("ValidarCPF", "Clientes", ErrorMessage = "CPF Inválido!!!")]
         public int cpf { get; set; }
 
-
+        [Display(Name = "Plano")]
         public Plano Plano { get; set; }
 
         public ICollection<Movimentacao> movimentacao { get; set; }
